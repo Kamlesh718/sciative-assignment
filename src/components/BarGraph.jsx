@@ -28,12 +28,12 @@ const BarGraph = () => {
   if (!data || data.length === 0)
     return <p className="text-center">No booking data available</p>;
 
-  const labels = data.map((item) => item["0"]);
-  const mainRoute = data.map((item) => item["1"]);
-  const viaRoute = data.map((item) => item["2"]);
+  const date = data.map((item) => item["0"]);
+  const viaRoute = data.map((item) => item["1"]);
+  const mainRoute = data.map((item) => item["2"]);
 
   const chartData = {
-    labels,
+    labels: date,
     datasets: [
       {
         label: "Main Route (Mumbai → Bangalore)",
