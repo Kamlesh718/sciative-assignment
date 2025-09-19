@@ -1,6 +1,7 @@
 import { useState } from "react";
 import sectionOneImage from "../assets/section1.png";
 import Navbar from "./Navbar";
+import BackgroundImage from "../assets/Purple_Circle_2.png";
 
 function Hero() {
   const [loading, setLoading] = useState(true);
@@ -10,7 +11,10 @@ function Hero() {
   const titleRest = " Article Generator";
 
   return (
-    <section className="flex flex-col  section-gradient" id="section-1">
+    <section
+      className="flex flex-col  section-gradient relative"
+      id="section-1"
+    >
       {/* NAVBAR */}
       <Navbar />
       <div className="flex flex-col gap-6 mt-16 px-12 justify-center items-center font-mono">
@@ -36,7 +40,7 @@ function Hero() {
           </button>
         </div>
 
-        <div className="md:mt-16 relative">
+        <div className="md:mt-16 relative z-10">
           {loading && (
             <div className="animate-pulse bg-gray-300 md:w-full h-64 md:h-96 px-3 rounded-lg mx-6" />
           )}
@@ -44,10 +48,21 @@ function Hero() {
           <img
             src={sectionOneImage}
             alt="section1"
-            className={`md:w-4xl w-screen max-w-none px-3 transition-opacity duration-500 ${
+            className={`md:w-2xl lg:w-4xl  w-screen max-w-none px-3 transition-opacity duration-500 ${
               loading ? "opacity-0" : "opacity-100"
             }`}
             onLoad={() => setLoading(false)}
+          />
+          <img
+            src={BackgroundImage}
+            alt="decoration"
+            className="overflow-hidden absolute left-0 md:-translate-x-3/5 -translate-x-1/2 md:top-[-20px]  w-42 top-1/2 -z-10  opacity-75"
+          />
+          <img
+            src={BackgroundImage}
+            alt="decoration"
+            className="absolute hidden md:right-[-50px] right-[-50px] bottom-0 -z-10 overflow-hidden opacity-75 w-42"
+            style={{ clipPath: "inset(0 0 50% 0)" }}
           />
         </div>
       </div>
