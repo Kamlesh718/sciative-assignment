@@ -32,8 +32,12 @@ function Hero() {
           </button>
         </div>
 
-        <div className="mt-16">
-          <img src={sectionOneImage} alt="section1" className="md:w-4xl " />
+        <div className="md:mt-16">
+          <img
+            src={sectionOneImage}
+            alt="section1"
+            className="md:w-4xl w-screen max-w-none px-3"
+          />
         </div>
       </div>
     </section>
