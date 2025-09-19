@@ -1,10 +1,14 @@
+import { useState } from "react";
 import sectionOneImage from "../assets/section1.png";
 import Navbar from "./Navbar";
 
 function Hero() {
+  const [loading, setLoading] = useState(true);
+
   const titleFirst = "Effortlessly Create High-";
   const titleSecond = "Quality Articles with Our ";
   const titleRest = " Article Generator";
+
   return (
     <section className="flex flex-col  section-gradient" id="section-1">
       {/* NAVBAR */}
@@ -32,11 +36,18 @@ function Hero() {
           </button>
         </div>
 
-        <div className="md:mt-16">
+        <div className="md:mt-16 relative">
+          {loading && (
+            <div className="animate-pulse bg-gray-300 md:w-full h-64 md:h-96 px-3 rounded-lg mx-6" />
+          )}
+
           <img
             src={sectionOneImage}
             alt="section1"
-            className="md:w-4xl w-screen max-w-none px-3"
+            className={`md:w-4xl w-screen max-w-none px-3 transition-opacity duration-500 ${
+              loading ? "opacity-0" : "opacity-100"
+            }`}
+            onLoad={() => setLoading(false)}
           />
         </div>
       </div>
