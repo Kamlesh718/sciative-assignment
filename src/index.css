@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+.section-gradient {
+  background: linear-gradient(to right, #ffe2e2, #f9fafb, #dbeafe),
+    linear-gradient(to bottom, transparent 70%, white 100%);
+  background-blend-mode: overlay;
+}
