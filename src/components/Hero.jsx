@@ -56,12 +56,12 @@ function Hero() {
           <img
             src={BackgroundImage}
             alt="decoration"
-            className="overflow-hidden absolute left-0 md:-translate-x-3/5 -translate-x-1/2 md:top-[-20px]  w-42 top-1/2 -z-10  opacity-75"
+            className="overflow-hidden absolute left-0 md:-translate-x-3/5 -translate-x-1/2 md:top-[-20px]  w-42 top-[-35px] -z-10  opacity-75"
           />
           <img
             src={BackgroundImage}
             alt="decoration"
-            className="absolute hidden md:right-[-50px] right-[-50px] bottom-0 -z-10 overflow-hidden opacity-75 w-42"
+            className="absolute hidden md:inline md:right-[-50px] right-[-50px] bottom-0 -z-10 overflow-hidden opacity-75 w-42"
             style={{ clipPath: "inset(0 0 50% 0)" }}
           />
         </div>
