@@ -47,7 +47,7 @@ function ToolsSection() {
   ];
   return (
     <section
-      className="flex flex-col items-center gap-3 section-gradient px-12"
+      className="flex flex-col items-center gap-3 bg-linear-to-r from-red-100 via-gray-100 to-blue-200 px-12 pb-12 "
       id="section-2"
     >
       <h2 className="text-gray-600 text-3xl lg:text-5xl mt-12 text-center font-semibold md:px-24">
